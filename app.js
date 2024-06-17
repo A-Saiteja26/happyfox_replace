@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import ticketRoutes from './routes/ticket.js';
 import getTicketRoutes from './routes/getTicket.js';
 import dummyRoutes from './routes/dummy.js';
+import updateRoutes from './routes/updateTicket.js';
 const app = express();
 const port = 3033;
 app.use(express.json());
@@ -22,6 +23,7 @@ app.get('/',(req,res)=>{
 app.use('/raiseTicket',ticketRoutes);
 app.use('/get',getTicketRoutes);
 app.use('/dummyApi',dummyRoutes);
+app.use('/update',updateRoutes);
 app.listen(port,()=>{
     console.log(`Server running on http://localhost:${port}`);
 })

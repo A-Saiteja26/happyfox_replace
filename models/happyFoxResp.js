@@ -18,6 +18,12 @@ const respSchema = new mongoose.Schema({
     status: {
         type: String,
         required: true
+    },
+    escalation:{
+        type:String
+    },
+    esc_details:{
+        type : String
     }
 })
 export default mongoose.model('HapFaxResp',respSchema);
